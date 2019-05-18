@@ -1,0 +1,329 @@
+<body>
+<div id="loading-layer" style="display:none">Загрузка. Пожалуйста, подождите...</div>
+<div id="rrVIOaIx"></div>
+<script>(function(w,d,o,g,r,a,m){w[r]=w[r]||function(){
+(w[r+'l']=w[r+'l']||[]).push(arguments)};if(!w.ABN){a=d.createElement(o),m=d.getElementsByTagName(o)[0];
+a.async=1;a.src=g;m.parentNode.insertBefore(a,m)}})(window,document,'script','https://xml.adbetnet.com/libs/b.js','ABNS');
+ABNS('rrVIOaIx', {id:1860996482});
+</script>
+<div class="header_fixed"><div class="wrp_header"><div class="logo_block">
+<a href="/"><img src="/templates/kinomassa/images/logo.png" alt="Смотреть фильмы и сериалы онлайн бесплатно в хорошем качестве и без регистрации!" /></a></div>
+<div class="top_menu_link"><ul>
+<li><a href="https://ereko.tv/movies/">Фильмы</a>,
+<a href="https://ereko.tv/series/">сериалы</a>,
+<a href="https://ereko.tv/animation/">мультики</a> онлайн</li>
+</ul></div><div class="link_header"></div>
+<div class="search_block">
+<form id="searchbar" method="post" action="" onsubmit="$(this).attr('action', '/?q='+encodeURIComponent($('#story').val()));">
+<input type="hidden" name="titleonly" value="3" /><input type="hidden" name="do" value="search" />
+<input type="hidden" name="subaction" value="search" /><input id="story" name="story" value="введите название для поиска" onblur="if(this.value=='') 
+this.value='введите название для поиска';" onfocus="if(this.value=='введите название для поиска') this.value='';" type="text" />
+<button class="butbtn" type="submit" title="Найти">Начать поиск</button></form></div></div></div>
+<div id="wrapper" class="wrapper_not_auth">
+<div id="middle"><div id="container"><div id="content"><div class="staticbox">
+<div id='dle-content'><center><div style="padding-top:10px"><div id="eabe">
+</div></div></center>
+<div itemscope itemtype="http://schema.org/Movie">
+<meta itemprop="name" content="Морская полиция: Спецотдел">
+<meta itemprop="image" content="https://ereko.tv/uploads/posts/2014-10/1412253483_ncis.jpg" />
+<meta itemprop="dateCreated" content="2019-05-15">
+<meta itemprop="genre" content="2003, Зарубежный, Боевик, Детектив, Драма, Комедия, Криминал, Триллер">
+<meta itemprop="director" content="Дэннис Смит, Томас Дж. Райт, Терренс О’Хара" />
+<meta itemprop="actor" content="Майкл Уэтерли, Поли Перретт, Марк Хэрмон, Дэвид МакКаллум, Шон Мюррэй, Коте де Пабло, Брайан Дитцен, Роки Кэрролл, Лорен Холли, Саша Александр" />
+<meta itemprop="description" content="Сериал с особо острым сюжетом, и элементами комедии. Он поведает нам о работе команды специального назначения. Миссии заключаются" />
+<div itemprop="video" itemscope itemtype="http://schema.org/VideoObject" class="storybox">
+<meta itemprop="name" content="Морская полиция: Спецотдел">
+<link itemprop="url" href="https://ereko.tv/12426/" />
+<meta itemprop="isFamilyFriendly" content="true" />
+<meta itemprop="uploadDate" content="2019-05-15" />
+<meta itemprop="thumbnailUrl" itemprop="thumbnail" content="https://ereko.tv/uploads/posts/2014-10/1412253483_ncis.jpg" />
+<meta itemprop="duration" content="43 мин." />
+<div class="title_block">
+<h1 itemprop="name">Морская полиция: Спецотдел смотреть онлайн</h1>
+<div>NCIS: Naval Criminal Investigative Service</div></div>
+<div class="bigposter"><img style="float:left;" src="https://ereko.tv/uploads/posts/2014-10/1412253457_ncis.jpg" alt="Постер к фильму Морская полиция: Спецотдел" title="Морская полиция: Спецотдел" />
+</div>
+<div class="infofilm"><ul>
+<li><b>Добавлено:</b><span style="color:#FF7710 ;font-weight:bold;">23 серия | 16 сезон</span></li>
+<li><b>Год:</b> 2003<br /></li>
+<li><b>Страна:</b> США<br /></li>
+<li><b>Жанр:</b> <a href="https://ereko.tv/year-2003/">2003</a>, <a href="https://ereko.tv/series/zarub/">Зарубежный</a>, <a href="https://ereko.tv/series/boevik/">Боевик</a>, <a href="https://ereko.tv/series/detective/">Детектив</a>, <a href="https://ereko.tv/series/drami/">Драма</a>, <a href="https://ereko.tv/series/komediya/">Комедия</a>, <a href="https://ereko.tv/series/kriminal/">Криминал</a>, <a href="https://ereko.tv/series/triller/">Триллер</a><br /></li>
+<li><b>Режиссер:</b> Дэннис Смит, Томас Дж. Райт, Терренс О’Хара<br /></li>
+<li><b>В ролях:</b> Майкл Уэтерли, Поли Перретт, Марк Хэрмон, Дэвид МакКаллум, Шон Мюррэй, Коте де Пабло, Брайан Дитцен, Роки Кэрролл, Лорен Холли, Саша Александр</li>
+<li><b>Длительность:</b> 43 мин.<br /></li>
+</ul></div><div><div></div></div>
+<div class="ratingbox" id="rate"><div class="ratingboxbox"><div class="ratingtitle">Ваша оценка:</div>
+<div class="ratingstar"><div id='ratig-layer-12426'><div class="rating">
+<ul class="unit-rating">
+<li class="current-rating" style="width:84%;">84</li>
+<li><a href="#" title="1" class="r1-unit" onclick="doRate('1', '12426'); return false;">1</a></li>
+<li><a href="#" title="2" class="r2-unit" onclick="doRate('2', '12426'); return false;">2</a></li>
+<li><a href="#" title="3" class="r3-unit" onclick="doRate('3', '12426'); return false;">3</a></li>
+<li><a href="#" title="4" class="r4-unit" onclick="doRate('4', '12426'); return false;">4</a></li>
+<li><a href="#" title="5" class="r5-unit" onclick="doRate('5', '12426'); return false;">5</a></li>
+<li><a href="#" title="6" class="r6-unit" onclick="doRate('6', '12426'); return false;">6</a></li>
+<li><a href="#" title="7" class="r7-unit" onclick="doRate('7', '12426'); return false;">7</a></li>
+<li><a href="#" title="8" class="r8-unit" onclick="doRate('8', '12426'); return false;">8</a></li>
+<li><a href="#" title="9" class="r9-unit" onclick="doRate('9', '12426'); return false;">9</a></li>
+<li><a href="#" title="10" class="r10-unit" onclick="doRate('10', '12426'); return false;">10</a></li>
+</ul>
+<div class="rating_digits"><div class="rating_digits_1">Общий бал: 8 . 4</div><div class="rating_digits_2">Проголосовало людей: 93</div></div></div></div></div></div></div>
+<div class="aboutfilm"><div class="abftitle">Описание:</div><span itemprop="description">Сериал с особо острым сюжетом, и элементами комедии. Он поведает нам о работе команды специального назначения. Миссии заключаются в расследовании дел связанных с морской пехотой. Каждая серия на протяжении 11 сезонов держит зрителя в интриге, и особом интересе развязки той или иной ситуации. Начав смотреть этот сериал, вы будете искренне переживать за героев этого произведения. Бесспорно, у вас появятся любимые персонажи. Команда состоит из специалистов в своём роде деятельности. Детектив на пенсии Энтони Диноззо, милая, и обворожительная Зива Давид, преуспевший судмедэксперт Эбби Шуто, и генний компьютерных технологий - Тимоти МакГи. Так или иначе, сериал не заставит вас скучать, а будет затрагивать каждую извилину, дабы мысленно помочь вашим героям раскрыть преступление. После просмотра у вас останутся глубокие впечатления, и яркие отзывы о сериале.</span>
+<div id="scroll_p"><div></div><div class="clr">
+<center><br /><script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js" charset="utf-8" async="async"></script>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir" data-counter="">
+</div></center></div></div></div>
+<div class="btnvideobox">
+<br /><div>
+<div class="boxvideo" style="width: 720px;"><div>
+<center><script src="/engine/inc/include/p_construct/players_style/js_common/CRalodePlayer.js" type="text/javascript"></script>
+<script src="/engine/inc/include/p_construct/players_style/xx-scrolling/xx-style.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        RalodePlayer.init({"7850":{"items":{"13":{"id":"61789","parent":"7850","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 1 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=1\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=1"}},"id":"7850","name":"\u0421\u0415\u0417\u041e\u041d 1","sort":"1","style":"","ssort":"2","data":""},"7851":{"items":{"8":{"id":"61790","parent":"7851","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 2 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=2\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=2"}},"id":"7851","name":"\u0421\u0415\u0417\u041e\u041d 2","sort":"2","style":"","ssort":"2","data":""},"7852":{"items":{"9":{"id":"61791","parent":"7852","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 3 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=3\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=3"}},"id":"7852","name":"\u0421\u0415\u0417\u041e\u041d 3","sort":"3","style":"","ssort":"2","data":""},"7853":{"items":{"10":{"id":"61792","parent":"7853","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 4 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=4\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=4"}},"id":"7853","name":"\u0421\u0415\u0417\u041e\u041d 4","sort":"4","style":"","ssort":"2","data":""},"7854":{"items":{"11":{"id":"61793","parent":"7854","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 5 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=5\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=5"}},"id":"7854","name":"\u0421\u0415\u0417\u041e\u041d 5","sort":"5","style":"","ssort":"2","data":""},"7855":{"items":{"12":{"id":"61794","parent":"7855","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 6 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=6\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=6"}},"id":"7855","name":"\u0421\u0415\u0417\u041e\u041d 6","sort":"6","style":"","ssort":"2","data":""},"7856":{"items":{"1":{"id":"61795","parent":"7856","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 7 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=7\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=7"}},"id":"7856","name":"\u0421\u0415\u0417\u041e\u041d 7","sort":"7","style":"","ssort":"2","data":""},"7857":{"items":{"2":{"id":"61796","parent":"7857","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 8 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=8\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=8"}},"id":"7857","name":"\u0421\u0415\u0417\u041e\u041d 8","sort":"8","style":"","ssort":"2","data":""},"7858":{"items":{"3":{"id":"61797","parent":"7858","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 9 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=9\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=9"}},"id":"7858","name":"\u0421\u0415\u0417\u041e\u041d 9","sort":"9","style":"","ssort":"2","data":""},"7859":{"items":{"4":{"id":"61798","parent":"7859","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 10 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=10\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=10"}},"id":"7859","name":"\u0421\u0415\u0417\u041e\u041d 10","sort":"10","style":"","ssort":"2","data":""},"7860":{"items":{"5":{"id":"61799","parent":"7860","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 11 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=11\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=11"}},"id":"7860","name":"\u0421\u0415\u0417\u041e\u041d 11","sort":"11","style":"","ssort":"2","data":""},"7861":{"items":{"6":{"id":"61800","parent":"7861","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 12 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=12\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=12"}},"id":"7861","name":"\u0421\u0415\u0417\u041e\u041d 12","sort":"12","style":"","ssort":"2","data":""},"7862":{"items":{"7":{"id":"61801","parent":"7862","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 13 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=13\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=13"}},"id":"7862","name":"\u0421\u0415\u0417\u041e\u041d 13","sort":"13","style":"","ssort":"2","data":""},"8640":{"items":{"14":{"id":"72859","parent":"8640","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 14 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=14\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=14"}},"id":"8640","name":"\u0421\u0415\u0417\u041e\u041d 14","sort":"14","style":"","ssort":"2","data":""},"9593":{"items":{"15":{"id":"96686","parent":"9593","sname":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 15 \u0441\u0435\u0437\u043e\u043d","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=15\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=15"}},"id":"9593","name":"\u0421\u0415\u0417\u041e\u041d 15","sort":"15","style":"","ssort":"2","data":""},"10490":{"items":{"16":{"id":"115160","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 1","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=01\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"1","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=01"},"17":{"id":"115646","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 2","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=02\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"2","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=02"},"18":{"id":"116050","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 3","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=03\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"3","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=03"},"19":{"id":"116326","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 4","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=04\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"4","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=04"},"20":{"id":"116635","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 5","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=05\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"5","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=05"},"21":{"id":"116955","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 6","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=06\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"6","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=06"},"22":{"id":"118507","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 7","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=07\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"7","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=07"},"23":{"id":"119146","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 8","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=08\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"8","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=08"},"24":{"id":"119799","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 9","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=09\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"9","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=09"},"25":{"id":"120035","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 10","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=10\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"10","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=10"},"26":{"id":"120974","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 11","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=11\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"11","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/49cf83386e4e5cada2198bbb725c0717\/iframe?season=16&episode=11"},"27":{"id":"121177","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 12","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=16&episode=12\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"12","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=16&episode=12"},"28":{"id":"122299","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 13","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=16&episode=13\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"13","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=16&episode=13"},"29":{"id":"122634","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 14","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=16&episode=14\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"14","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=16&episode=14"},"30":{"id":"122966","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 15","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=16&episode=15\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"15","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=16&episode=15"},"31":{"id":"123612","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 16","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=16&episode=16\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"16","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=16&episode=16"},"32":{"id":"124316","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 17","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=16&episode=17\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"17","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/streamguard.cc\/serial\/e771ab9e5f360165099e67620ed38a81\/iframe?season=16&episode=17"},"33":{"id":"124676","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 18","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/vio.to\/video\/t\/tjvrdh1ecb0u26bmlvorcufy\/871084\/\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"18","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/vio.to\/video\/t\/tjvrdh1ecb0u26bmlvorcufy\/871084\/"},"34":{"id":"125065","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 19","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/vio.to\/video\/t\/tjvrdh1ecb0u26bmlvorcufy\/876605\/\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"19","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/vio.to\/video\/t\/tjvrdh1ecb0u26bmlvorcufy\/876605\/"},"35":{"id":"125453","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 20","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/vio.to\/video\/t\/tjvrdh1ecb0u26bmlvorcufy\/882083\/\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"20","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/vio.to\/video\/t\/tjvrdh1ecb0u26bmlvorcufy\/882083\/"},"36":{"id":"126089","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 21","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/vio.to\/video\/t\/tjvrdh1ecb0u26bmlvorcufy\/893358\/\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"21","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/vio.to\/video\/t\/tjvrdh1ecb0u26bmlvorcufy\/893358\/"},"37":{"id":"126373","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 22","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/vio.to\/video\/t\/tjvrdh1ecb0u26bmlvorcufy\/898311\/\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"22","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/vio.to\/video\/t\/tjvrdh1ecb0u26bmlvorcufy\/898311\/"},"38":{"id":"126600","parent":"10490","sname":"\u0421\u0435\u0440\u0438\u044f 23","scode":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/vio.to\/video\/t\/tjvrdh1ecb0u26bmlvorcufy\/903625\/\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","lssort":"23","err":"0","codetype":"110","max_size":"0","sdata":"","scode_begin":"ifr::https:\/\/vio.to\/video\/t\/tjvrdh1ecb0u26bmlvorcufy\/903625\/"}},"id":"10490","name":"\u0421\u0415\u0417\u041e\u041d 16","sort":"16","style":"","ssort":"2","data":""}},{"scount":38,"zcount":16,"first_name":"\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u043f\u043e\u043b\u0438\u0446\u0438\u044f: \u0421\u043f\u0435\u0446\u043e\u0442\u0434\u0435\u043b 1 \u0441\u0435\u0437\u043e\u043d","first_code":"<iframe width=\"100%\" height=\"100%\" src=\"https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=1\" frameborder=\"0\" scrolling=\"no\" allowfullscreen><\/iframe>","first_zid":"7850","first_sid":"61789","style":"","first_z_name":"\u0421\u0415\u0417\u041e\u041d 1","first_code_begin":"ifr::https:\/\/streamguard.cc\/serial\/d08f6dc93c19f80c0b22b18048c15cab\/iframe?season=1"});
+    });
+</script>
+<style>
+    div.vc-player { width: 650px; ?>; margin:0; padding:0; overflow: hidden;}
+    .vc-player .RalodePlayer {width:100%; height:100%; margin: 0 auto 0; background-color: #151515; padding:0; line-height:normal;}
+    .vc-player .playerCode {min-height: 460px; height: 460px;}
+</style>
+<link type="text/css" rel="stylesheet" href="/engine/inc/include/p_construct/players_style/xx-scrolling/styles.css">
+<div id="VideoConstructor_v3_x_Player" class="vc-player">
+<div class="RalodePlayer ">
+<div id="rl-buttons-top" class="rl-buttons">
+<div class="buttonLR ButtonLft"></div>
+<div class="buttonLR ButtonRgh"></div>
+<div class="RlVisor">
+<div class="rl-lenta" id="rl-lenta-top">
+<div class="RlItem serie-active">Пример сезона</div>
+</div>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="playerCode">
+<iframe width="100%" height="100%" src="https://streamguard.cc/serial/d08f6dc93c19f80c0b22b18048c15cab/iframe?season=1" frameborder="0" scrolling="no" allowfullscreen></iframe> </div>
+<div id="rl-buttons-bottom" class="rl-buttons">
+<div class="buttonLR ButtonLft"></div>
+<div class="buttonLR ButtonRgh"></div>
+<div class="RlVisor">
+<div class="rl-lenta" id="rl-lenta-bottom">
+<div class="RlItem serie-active">Пример серии</div>
+</div>
+</div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div id="vc-complait-box">
+<span class="vc-complait-span"><a href="#" class="CvComplaintShowModal"><b>СООБЩИТЕ НАМ ЕСЛИ ВИДЕО НЕ РАБОТАЕТ</b></a></span>
+</div>
+<div id="vc-complait-dialog" title="Необоснованные жалобы игнорируются" style="display:none;">
+<b>Если нет звука обновите iPhone/iPad Settings Update-IOS 11 new version</b>
+<div><label><input type="radio" name="cv_complaint" value="Видео удалено" checked>Видео удалено</label></div>
+<div><label><input type="radio" name="cv_complaint" value="">Напишите пожалуйста что именно не работает.</label></div>
+<div><textarea id="cv_complaint_text" disabled style="width:100% !important;"></textarea></div>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div style="margin:0 auto"></div></center>
+<div id="gnezdo_ru_18621"></div><script language='JavaScript'>var s = document.createElement("script"),
+f = function(){ document.getElementsByTagName("head")[0].appendChild(s); };s.type = "text/javascript";
+s.async = true;s.src = 'https://news.2xclick.ru/show/18621/block_a.js';if (window.opera == "[object Opera]") {
+document.addEventListener("DOMContentLoaded", f);} else { f(); }</script>
+</div></div></div></div>
+<div style="clear: both;height: 400px;"></div>
+<div style="text-align: left;padding: 0 0 20px 0; height: 280px; position: relative;">
+<div class="video-socs"><div style="padding-bottom: 5px;"></div></div>
+<div class="cooment_pl"></div></div>
+<div style="position: relative; top: 21px; float: right;z-index: 1000">
+<span class="dateright" style="padding:0px 20px 20px 20px;">
+<span class="dateicon" title="Дата">
+<span id="selection_index43" class="selection_index"></span>
+15 мая 2019</span></span></div>
+<div class="rncommbox"><div class="rncommboxtitle"><b>Что еще посмотреть:</b></div>
+<div class="shortfilmrn"> <a href="https://ereko.tv/12188/"><img src="https://ereko.tv/uploads/posts/2014-07/1405589817_9.jpg" alt="" /></a>
+<div class="rnboxbt">
+<p><a href="https://ereko.tv/12188/">Курортная полиция</a></p>
+</div>
+</div>
+<div class="shortfilmrn"> <a href="https://ereko.tv/11677/"><img src="https://ereko.tv/uploads/posts/2014-01/1389819700_1.jpg" alt="" /></a>
+<div class="rnboxbt">
+<p><a href="https://ereko.tv/11677/">Полиция Чикаго</a></p>
+</div>
+</div>
+<div class="shortfilmrn"> <a href="https://ereko.tv/11460/"><img src="https://ereko.tv/uploads/posts/2013-11/1384349287_kuklovodi.jpg" alt="" /></a>
+<div class="rnboxbt">
+<p><a href="https://ereko.tv/11460/">Кукловоды (мини-сериал)</a></p>
+</div>
+</div>
+<div class="shortfilmrn"> <a href="https://ereko.tv/10982/"><img src="https://ereko.tv/uploads/posts/2013-08/1377234931_d26ad44.jpg" alt="" /></a>
+<div class="rnboxbt">
+<p><a href="https://ereko.tv/10982/">Цезарь</a></p>
+</div>
+</div>
+<div class="shortfilmrn"> <a href="https://ereko.tv/10219/"><img src="https://ereko.tv/uploads/posts/2013-03/1363772294_26598.jpg" alt="" /></a>
+<div class="rnboxbt">
+<p><a href="https://ereko.tv/10219/">Праздник мая</a></p>
+</div>
+</div>
+<div class="clr"></div></div>
+<div id="comment" class="commentsbox">
+<div class="commentstitle"><div>Комментарии </div><div style="float: right"></div></div>
+<div>
+<center><script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+<script type="text/javascript">VK.init({apiId: 4807161, onlyWidgets: true});</script>
+<div id="vk_comments"></div><script type="text/javascript">VK.Widgets.Comments("vk_comments", 
+{limit: 20, attach: "*"});</script></center></div><div class="comments_tab"><br /></div>
+<div class="clr"></div></div></div></div></div></div><div class="clr"></div></div></div>
+<div class="sidebar" id="sideLeft">
+<div class="tbl"></div>
+<div id="M267734ScriptRootC655183"><div id="M267734PreloadC655183"></div>
+<script>(function(){var D=new Date(),d=document,b='body',ce='createElement',ac='appendChild',st='style',
+ds='display',n='none',gi='getElementById',lp=d.location.protocol,wp=lp.indexOf('http')==0?lp:'https:';
+var i=d[ce]('iframe');i[st][ds]=n;d[gi]("M267734ScriptRootC655183")[ac](i);try
+{var iw=i.contentWindow.document;iw.open();iw.writeln("<ht"+"ml><bo"+"dy></bo"+"dy></ht"+"ml>");
+iw.close();var c=iw[b];}catch(e){var iw=d;var c=d[gi]("M267734ScriptRootC655183");}var dv=iw[ce]('div');
+dv.id="MG_ID";dv[st][ds]=n;dv.innerHTML=655183;c[ac](dv);var s=iw[ce]('script');s.async='async';
+s.defer='defer';s.charset='utf-8';s.src=wp+"//jsc.mgid.com/1/e/1.ereko.ru.655183.js?t="+D.getYear()
++D.getMonth()+D.getUTCDate()+D.getUTCHours();c[ac](s);})();</script></div>
+<div class="tblb"></div>
+<div class="clr"></div>
+</div>
+<div class="sidebar" id="sideRight">
+<div class="tbr"></div>
+<script>$(document).ready(function(){$('.mainmenu a').each(function () {
+if (this.href == location.href) $(this).addClass('active');});});</script>
+<div class="Rtitle">Разделы</div>
+<ul class="mainmenu">
+<li><a href="/movies/">Фильмы</a></li>
+<li><a href="/series/">Сериалы</a></li>
+<li><a href="/animation/">Мультфильмы</a></li>
+<li><a href="/tv/">Тв программы</a></li>
+<li><a href="/tnt/">Канал "ТНТ"</a></li>
+</ul>
+<div class="Rtitle">Сериалы</div>
+<ul class="mainmenu">
+<li><a href="/armserial/">Армянские</a></li>
+<li><a href="/series/russian/">Российские</a></li>
+<li><a href="/series/zarub/">Зарубежные</a></li>
+<li><a href="/series/boevik/">Боевики</a></li>
+<li><a href="/series/voenny/">Военные</a></li>
+<li><a href="/series/vestern/">Вестерн</a></li>
+<li><a href="/series/drami/">Драмы</a></li>
+<li><a href="/series/detective/">Детективы</a></li>
+<li><a href="/series/dokumentalnyy/">Документальный</a></li>
+<li><a href="/series/detskiy/">Для детей</a></li>
+<li><a href="/series/komediya/">Комедии</a></li>
+<li><a href="/series/kriminal/">Криминал</a></li>
+<li><a href="/series/melodrami/">Мелодрамы</a></li>
+<li><a href="/series/muzyka/">Музыка</a></li>
+<li><a href="/series/myuzikl/">Мюзикл</a></li>
+<li><a href="/series/mistika/">Мистика</a></li>
+<li><a href="/series/priklyucheniya/">Приключения</a></li>
+<li><a href="/series/sports/">Спорт</a></li>
+<li><a href="/series/semeynyy/">Семейный</a></li>
+<li><a href="/series/triller/">Триллеры</a></li>
+<li><a href="/series/istoriya/">История</a></li>
+<li><a href="/series/uzhasy/">Ужасы</a></li>
+<li><a href="/series/fantastik/">Фантастика</a></li>
+<li><a href="/series/fentezi/">Фэнтези</a></li>
+</ul>
+<div class="Rtitle">Фильмы</div>
+<ul class="mainmenu">
+<li><a href="/movies/indiyskiye/">Индийские</a></li>
+<li><a href="/movies/boeviki/">Боевики</a></li>
+<li><a href="/movies/voennye/">Военные</a></li>
+<li><a href="/movies/western/">Вестерн</a></li>
+<li><a href="/movies/drama/">Драмы</a></li>
+<li><a href="/movies/detectivi/">Детективы</a></li>
+<li><a href="/movies/documentary/">Документальный</a></li>
+<li><a href="/movies/childrens/">Для детей</a></li>
+<li><a href="/movies/comedy/">Комедии</a></li>
+<li><a href="/movies/crime/">Криминал</a></li>
+<li><a href="/movies/melodrama/">Мелодрамы</a></li>
+<li><a href="/movies/music/">Музыка</a></li>
+<li><a href="/movies/musical/">Мюзикл</a></li>
+<li><a href="/movies/mystic/">Мистика</a></li>
+<li><a href="/movies/adventures/">Приключения</a></li>
+<li><a href="/movies/sport/">Спорт</a></li>
+<li><a href="/movies/family/">Семейный</a></li>
+<li><a href="/movies/mystery/">Триллеры</a></li>
+<li><a href="/movies/horrors/">Ужасы</a></li>
+<li><a href="/movies/fantastika/">Фантастика</a></li>
+<li><a href="/movies/fantasy/">Фэнтези</a></li>
+</ul>
+<div class="Rtitle">Мультфильмы</div>
+<ul class="mainmenu">
+<li><a href="/animation/anime/">Аниме</a></li>
+<li><a href="/animation/vzroslye/">Для взрослых</a></li>
+<li><a href="/animation/detskie/">Для детей</a></li>
+<li><a href="/animation/polnometrazhnye/">Полнометражные</a></li>
+<li><a href="/animation/sovetskie/">Советские</a></li>
+</ul>
+<div class="Rtitle">Тв программы</div>
+<ul class="mainmenu">
+<li><a href="/tv/vokrug-sveta/">Вокруг света</a></li>
+<li><a href="/tv/health/">Здоровье</a></li>
+<li><a href="/tv/living_nature/">Живая природа</a></li>
+<li><a href="/tv/kulinariya/">Кулинария</a></li>
+<li><a href="/tv/poznavatelnye/">Познавательные</a></li>
+<li><a href="/tv/sporte/">Спорт</a></li>
+<li><a href="/tv/hobbies/">Увлечения</a></li>
+<li><a href="/tv/humor/">Юмористические</a></li>
+</ul>
+<div class="Rtitle">По годам</div>
+<ul class="mainmenu">
+<li><a href="/year-2019/">2019 год</a></li>
+<li><a href="/year-2018/">2018 год</a></li>
+<li><a href="/year-2017/">2017 год</a></li>
+<li><a href="/year-2016/">2016 год</a></li>
+<li><a href="/year-2015/">2015 год</a></li>
+<li><a href="/year-2014/">2014 год</a></li>
+<li><a href="/year-2013/">2013 год</a></li>
+<li><a href="/year-2012/">2012 год</a></li>
+<li><a href="/year-2011/">2011 год</a></li>
+<li><a href="/year-2010/">2010 год</a></li>
+<li><a href="/year-2009/">2009 год</a></li>
+<li><a href="/year-2008/">2008 год</a></li>
+<li><a href="/year-2007/">2007 год</a></li>
+<li><a href="/year-2006/">2006 год</a></li>
+<li><a href="/year-2005/">2005 год</a></li>
+<li><a href="/year-2004/">2004 год</a></li>
+<li><a href="/year-2003/">2003 год</a></li>
+<li><a href="/year-2002/">2002 год</a></li>
+<li><a href="/year-2001/">2001 год</a></li>
+<li><a href="/year-2000/">2000 год</a></li>
+<li><a href="/year-1999/">1999 год</a></li>
+<li><a href="/year-1998/">1998 год</a></li>
+<li><a href="/year-1997/">1997 год</a></li>
+<li><a href="/year-1996/">1996 год</a></li>
+<li><a href="/year-1995/">1995 год</a></li>
+<li><a href="/year-1994/">1994 год</a></li>
+<li><a href="/year-1993/">1993 год</a></li>
+<li><a href="/year-1992/">1992 год</a></li>
+<li><a href="/year-1991/">1991 год</a></li>
+<li><a href="/year-1989/">1989 год</a></li>
+<li><a href="/year-1988/">1988 год</a></li>
+<li><a href="/year-1987/">1987 год</a></li>
+<li><a href="/year-1986/">1986 год</a></li>
+<li><a href="/year-1985/">1985 год</a></li>
+<li><a href="/year-1984/">1984 год</a></li>
+<li><a href="/year-1983/">1983 год</a></li>
+<li><a href="/year-1982/">1982 год</a></li>
+<li><a href="/year-1980/">1980 год</a></li>
+</ul>
+<div class="Rtitle" style="margin-bottom:10px"><span></span></div>
+<div style="display:block; float: left; margin-left:2px; margin-top: 10px;">
+<div class="tbrb"></div></div></div>
+<blockquote style="margin: 0 0 0 10px; border: none; padding: 40px;"><div style="text-align: left;">
+</div></blockquote></div>
+<div id="footer"><div id="ftrbox"><div class="ftr1">
+<div class="copyright"> © 2009-2019 Ereko.tv <br />
+| <a href="/index.php?do=feedback"><strong>Контакты</strong></a> |
+<a href="/abuse.html"><strong>Для правообладателей</strong></a> </div>
+<div style="float: left;margin: 0 0 0 50px;"><ul id="fontscale" class="topmenu" style="float: left;"></ul>
+<div class="schet">
+</div></div></div></div></div>
+<script type="text/javascript" src="/templates/kinomassa/js/jquery.sliderForDLE.min.js"></script>
+</body>
