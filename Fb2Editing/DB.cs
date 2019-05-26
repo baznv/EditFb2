@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows;
 
 namespace Fb2Editing
@@ -14,6 +14,7 @@ namespace Fb2Editing
     public static class DB
     {
         private static string fullPathToDB;
+        private static string stringConnection;// = $"Data Source={fullPathToDB}; Version=3; PRAGMA journal_mode=MEMORY;";
 
         internal static void Init()
         {
@@ -25,6 +26,7 @@ namespace Fb2Editing
                 SQLiteConnection.CreateFile(fullPathToDB);
                 if (File.Exists(fullPathToDB))
                 {
+                    stringConnection = $"Data Source={fullPathToDB}; Version=3; journal_mode=MEMORY; synchronous = OFF;";
                     CreateTables();
                     SettingsApp set = new SettingsApp("pathLibrary", @"D:\Книги");
                     InsertRow(set);
@@ -33,13 +35,14 @@ namespace Fb2Editing
                 }
                 else MessageBox.Show("Возникла ошибка при создании базы данных");
             }
+
         }
 
         internal static string GetPathToLibrary()
         {
             string comm = "SELECT * FROM SettingsApp WHERE Name_Setting=\"pathLibrary\";";
             string result = "";
-            using (SQLiteConnection conn = new SQLiteConnection($"Data Source={fullPathToDB}; Version=3;"))
+            using (SQLiteConnection conn = new SQLiteConnection(stringConnection))
             {
                 SQLiteCommand command = new SQLiteCommand(conn);
                 command.CommandText = comm;
@@ -57,9 +60,10 @@ namespace Fb2Editing
 
         internal static int GetIDLanguage(string codeLanguage)
         {
-            string comm = "SELECT id FROM Language WHERE Code=\"code\";";
+            if (codeLanguage == null) return -1;
+            string comm = String.Format("SELECT id FROM Language WHERE Code=\"{0}\";", codeLanguage);
             int id;
-            using (SQLiteConnection conn = new SQLiteConnection($"Data Source={fullPathToDB}; Version=3;"))
+            using (SQLiteConnection conn = new SQLiteConnection(stringConnection))
             {
                 SQLiteCommand command = new SQLiteCommand(conn);
                 command.CommandText = comm;
@@ -73,15 +77,19 @@ namespace Fb2Editing
 
         internal static int GetIDGenre(string codeGenre)
         {
-            string comm = "SELECT id FROM Genre WHERE Code=\"code\";";
+            string comm = String.Format("SELECT id FROM Genre WHERE Code=\"{0}\";", codeGenre.Split(' ')[0]);
             int id;
-            using (SQLiteConnection conn = new SQLiteConnection($"Data Source={fullPathToDB}; Version=3;"))
+            using (SQLiteConnection conn = new SQLiteConnection(stringConnection))
             {
                 SQLiteCommand command = new SQLiteCommand(conn);
                 command.CommandText = comm;
 
                 conn.Open();
-                id = int.Parse(command.ExecuteScalar().ToString());
+                var value = command.ExecuteScalar();
+                if (value == null)
+                    return -1;
+                else
+                    id = int.Parse(value.ToString());
                 conn.Close();
             }
             return id;
@@ -91,7 +99,7 @@ namespace Fb2Editing
         {
             string comm = $"SELECT COUNT(*) FROM {type.Name}";
             int result = 0;
-            using (SQLiteConnection conn = new SQLiteConnection($"Data Source={fullPathToDB}; Version=3;"))
+            using (SQLiteConnection conn = new SQLiteConnection(stringConnection))
             {
                 SQLiteCommand command = new SQLiteCommand(conn);
                 command.CommandText = comm;
@@ -129,13 +137,13 @@ namespace Fb2Editing
 
             List<Language> lst = new List<Language>();
 
-            for (int i = 4; i < text.Count; i += 4)
+            for (int i = 4; i < text.Count - 1; i += 4)
             {
                 for (int j = 1; j < 4; j++)
                 {
                     if (text[i + j] != "-")
-        
-            {
+
+                    {
                         Language lan = new Language(text[i], text[i + j]);
                         var tmp = lst.Where(x => x.Value == lan.Value && x.Code == lan.Code);
                         if (tmp.Count() == 0)
@@ -146,25 +154,25 @@ namespace Fb2Editing
             InsertRows(lst);
         }
 
-        public static int SaveData<T>(T obj)
+        public static void SaveData<T>(T obj)
         {
-            return InsertRow(obj);
+            InsertRow(obj);
         }
 
-        public static List<int> SaveListData<T>(List<T> obj)
+        public static void SaveListData<T>(List<T> obj)
         {
-            return InsertRows(obj);
+            InsertRows(obj);
         }
 
-
-        private static List<int> InsertRows<T>(List<T> lstObj)
+        private static void InsertRows<T>(List<T> lstObj)
         {
             Type type = typeof(T);
             List<int> lstId = new List<int>();
             List<string> fields = GetNameProperties(type);
             string comm = GetRowINSERT<T>(type, fields);
+            comm += "SELECT last_insert_rowid();";
 
-            using (SQLiteConnection conn = new SQLiteConnection($"Data Source={fullPathToDB}; Version=3;"))
+            using (SQLiteConnection conn = new SQLiteConnection(stringConnection))
             {
                 SQLiteCommand command = new SQLiteCommand(conn);
                 command.CommandText = comm;
@@ -175,14 +183,15 @@ namespace Fb2Editing
                 {
                     foreach (var obj in lstObj)
                     {
+                        int id;
                         for (int i = 0; i < fields.Count; i++)
                         {
                             PropertyInfo fi = type.GetProperty(fields[i]);
                             command.Parameters.AddWithValue(fields[i], fi.GetValue(obj));
                         }
-                        command.ExecuteNonQuery();
+                        id = int.Parse(command.ExecuteScalar().ToString());
                         PropertyInfo fi_id = type.GetProperty("ID");
-                        lstId.Add(int.Parse(fi_id.GetValue(obj).ToString()));
+                        fi_id.SetValue(obj, id);
                     }
                     transaction.Commit();
                     conn.Close();
@@ -194,18 +203,18 @@ namespace Fb2Editing
 
                 conn.Close();
             }
-            return lstId;
         }
 
-        private static int InsertRow<T>(T obj)
+        private static void InsertRow<T>(T obj)
         {
             Type type = typeof(T);
             List<string> fields = GetNameProperties(type);
             string comm = GetRowINSERT<T>(type, fields);
+            comm += "SELECT last_insert_rowid();";
 
             int id;
 
-            using (SQLiteConnection conn = new SQLiteConnection($"Data Source={fullPathToDB}; Version=3;"))
+            using (SQLiteConnection conn = new SQLiteConnection(stringConnection))
             {
                 SQLiteCommand command = new SQLiteCommand(conn);
                 command.CommandText = comm;
@@ -217,12 +226,13 @@ namespace Fb2Editing
                 }
 
                 conn.Open();
-                command.ExecuteNonQuery();
+                //command.ExecuteNonQuery();
+                id = int.Parse(command.ExecuteScalar().ToString());
                 PropertyInfo fi_id = type.GetProperty("ID");
-                id = int.Parse(fi_id.GetValue(obj).ToString());
+                fi_id.SetValue(obj, id);
+
                 conn.Close();
             }
-            return id;
         }
 
         private static string GetRowINSERT<T>(Type type, List<string> fields)

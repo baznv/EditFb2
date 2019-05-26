@@ -5,7 +5,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace EditFb2
+
+namespace Fb2Editing
 {
     public class Parse
     {
@@ -37,7 +38,68 @@ namespace EditFb2
 
         public Parse(string str)
         {
-            CreateBook(str);
+            //CreateBook(str);
+            ParseData(str);
+        }
+
+        private void ParseData(string str)
+        {
+            string lastNodeName = "";
+
+            //using поток
+
+            //using (XmlReader xml = XmlReader.Create(str))
+            //{
+            //    while (xml.Read())
+            //    {
+            //        switch (xml.NodeType)
+            //        {
+            //            case XmlNodeType.Element:
+            //                // нашли элемент member
+            //                if (xml.Name == "description")
+            //                {
+
+            //                    //if (xml.HasAttributes)
+            //                    //{
+            //                    //    // поиск атрибута kuid
+            //                    //    while (xml.MoveToNextAttribute())
+            //                    //    {
+            //                    //        if (xml.Name == "kuid")
+            //                    //        {
+            //                    //            Console.WriteLine("KUID: {0}", xml.Value);
+            //                    //            break;
+            //                    //        }
+            //                    //    }
+            //                    //}
+            //                }
+            //                // запоминаем имя найденного элемента
+            //                lastNodeName = xml.Name;
+            //                break;
+            //            case XmlNodeType.Text:
+            //                // нашли текст, смотрим по имени элемента, что это за текст
+            //                if (lastNodeName == "nickname")
+            //                {
+            //                    Console.WriteLine("Псевдоним: {0}", xml.Value);
+            //                }
+            //                else if (lastNodeName == "firstName")
+            //                {
+            //                    Console.WriteLine("Имя: {0}", xml.Value);
+            //                }
+            //                else if (lastNodeName == "lastName")
+            //                {
+            //                    Console.WriteLine("Фамилия: {0}", xml.Value);
+            //                }
+            //                break;
+            //            case XmlNodeType.EndElement:
+            //                // закрывающий элемент
+            //                if (xml.Name == "member")
+            //                {
+            //                    Console.WriteLine("------------------------------------------");
+            //                }
+            //                break;
+            //        }
+            //    }
+            //}
         }
 
         private void CreateBook(string str)
@@ -101,10 +163,10 @@ namespace EditFb2
                             Author author = new Author()
                             {
                                 First_name = GetSubstring("first_name", item),
-                                Last_name = GetSubstring("last_name", item),
-                                Middle_name = GetSubstring("middle_name", item),
-                                Nickname = GetSubstring("nickname", item),
-                                Email = GetSubstring("email", item),
+                                //Last_name = GetSubstring("last_name", item),
+                                //Middle_name = GetSubstring("middle_name", item),
+                                //Nickname = GetSubstring("nickname", item),
+                                //Email = GetSubstring("email", item),
                             };
                             di_author.Add(author);
                         }
@@ -129,7 +191,7 @@ namespace EditFb2
             }
         }
 
-        private string GetSubstring(string nameTag, string str)
+        public string GetSubstring(string nameTag, string str)
         {
             Regex reg = new Regex($"(<{nameTag}[\\s\\S]*?[>])([\\s\\S]*?)</{nameTag}>");
             Match match = reg.Match(str);

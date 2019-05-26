@@ -13,9 +13,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Xml;
 
-namespace EditFb2
+
+namespace Fb2Editing
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -26,6 +26,7 @@ namespace EditFb2
         //string dir = @"D:/Projects/EditFb2/EditFb2";
         //string PathToDB = @"Library.db";
 
+        //public static XmlSerializerNamespaces xmlns = new XmlSerializerNamespaces();
         public MainWindow()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace EditFb2
 
             int count = DB.GetCountRows(typeof(Book));
             if (count == 0)
-                CreateLibrary();
+                CreateLibrary0();
 
             //Parse.InitLibrary();
 
@@ -60,7 +61,34 @@ namespace EditFb2
             //imgI.Source = bitmap;
         }
 
-        private static void CreateLibrary()
+        private void CreateLibrary0()
+        {
+            string path = DB.GetPathToLibrary();
+            string[] arrFiles;
+            if (Directory.Exists(path))
+            {
+                arrFiles = Directory.GetFiles(path, "*.fb2", SearchOption.AllDirectories);
+
+                foreach (string name in arrFiles)
+                {
+                    ReadWriteFB2 rw = new ReadWriteFB2();
+                    rw.GetFieldFromFile(name);
+                    //XmlSerializer serializer = new XmlSerializer(typeof(Description), "xmlns");
+                    //FileStream fs = new FileStream(name, FileMode.Open);
+                    //Description m0 = (Description)serializer.Deserialize(fs); 
+
+
+                    //Parse p = new Parse(name);
+                }
+            }
+        }
+
+        //private void serNamespace(string nSpace)
+        //{
+        //    xmlns.Add("", );
+        //}
+
+        private static void CreateLibrary123()
         {
             string path = DB.GetPathToLibrary();
             string[] arrFiles;
@@ -77,7 +105,7 @@ namespace EditFb2
                 List<int> ids = new List<int>();
 
 
-                /*foreach (string name in arrFiles)
+                foreach (string name in arrFiles)
                 {
                     using (StreamReader fs = new StreamReader(name))
                     {
@@ -185,63 +213,63 @@ namespace EditFb2
                             //Url
                         };
                     }
-                }*/
-
-                //1 этап
-                foreach (string name in arrFiles)
-                {
-                    Encoding encoding = null;
-                    using (StreamReader sr = new StreamReader(name, true))
-                    {
-                        encoding = sr.CurrentEncoding;
-                    }
-                    List<string> lstStr = new List<string>();
-
-                    XmlTextReader reader = new XmlTextReader(name);
-                    while (reader.Read())
-                    {
-                        switch (reader.NodeType)
-                        {
-                            case XmlNodeType.Element: // Узел является элементом.
-                                lstStr.Add("<" + reader.Name + ">");
-                                break;
-                            case XmlNodeType.Text: // Вывести текст в каждом элементе.
-                                lstStr.Add(reader.Value);
-                                break;
-                            case XmlNodeType.EndElement: // Вывести конец элемента.
-                                lstStr.Add("</" + reader.Name + ">");
-                                break;
-                        }
-                    }
-
-                    //using (StreamReader fs = new StreamReader(name, Encoding.Default))
-                    //{
-                    //    string readText = fs.ReadToEnd();
-                    //    Parse parse = new Parse(readText);
-
-                    //    Book book = new Book()
-                    //    {
-                    //        Book_title = parse.ti_book_title,
-                    //        Annotation = parse.ti_annotation,
-                    //        Date_write = parse.ti_date,
-                    //        Coverpage = parse.ti_coverpage,
-                    //        Book_name = parse.pi_book_name,
-                    //        Publisher = parse.pi_publisher,
-                    //        City = parse.pi_city,
-                    //        Year = parse.pi_year,
-                    //        ID_Language = DB.GetIDLanguage(parse.ti_lang),
-                    //        ID_LanguageAfterTranslate = DB.GetIDLanguage(parse.ti_src_lang)
-                    //    };
-                    //    books.Add(book);
-
-                    //    parses.Add(parse);
-                    //}
-
                 }
 
-                ids = DB.SaveListData(books);
-                int a = ids.Count;
-                int b = parses.Count;
+                //1 этап
+                //foreach (string name in arrFiles)
+                //{
+                //    //Encoding encoding = null;
+                //    //using (StreamReader sr = new StreamReader(name, true))
+                //    //{
+                //    //    encoding = sr.CurrentEncoding;
+                //    //}
+                //    //List<string> lstStr = new List<string>();
+
+                //    XmlReader reader = new XmlReader(name);
+                //    while (reader.Read())
+                //    {
+                //        switch (reader.NodeType)
+                //        {
+                //            case XmlNodeType.Element: // Узел является элементом.
+                //                lstStr.Add("<" + reader.Name + ">");
+                //                break;
+                //            case XmlNodeType.Text: // Вывести текст в каждом элементе.
+                //                lstStr.Add(reader.Value);
+                //                break;
+                //            case XmlNodeType.EndElement: // Вывести конец элемента.
+                //                lstStr.Add("</" + reader.Name + ">");
+                //                break;
+                //        }
+                //    }
+
+                //    //using (StreamReader fs = new StreamReader(name, Encoding.Default))
+                //    //{
+                //    //    string readText = fs.ReadToEnd();
+                //    //    Parse parse = new Parse(readText);
+
+                //    //    Book book = new Book()
+                //    //    {
+                //    //        Book_title = parse.ti_book_title,
+                //    //        Annotation = parse.ti_annotation,
+                //    //        Date_write = parse.ti_date,
+                //    //        Coverpage = parse.ti_coverpage,
+                //    //        Book_name = parse.pi_book_name,
+                //    //        Publisher = parse.pi_publisher,
+                //    //        City = parse.pi_city,
+                //    //        Year = parse.pi_year,
+                //    //        ID_Language = DB.GetIDLanguage(parse.ti_lang),
+                //    //        ID_LanguageAfterTranslate = DB.GetIDLanguage(parse.ti_src_lang)
+                //    //    };
+                //    //    books.Add(book);
+
+                //    //    parses.Add(parse);
+                //    //}
+
+                //}
+
+                //ids = DB.SaveListData(books);
+                //int a = ids.Count;
+                //int b = parses.Count;
 
             }
         }

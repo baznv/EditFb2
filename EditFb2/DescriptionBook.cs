@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EditFb2
+namespace Fb2Editing
 {
     //public class Book
     //{

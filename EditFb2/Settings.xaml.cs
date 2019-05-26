@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace EditFb2
+namespace Fb2Editing
 {
     /// <summary>
     /// Логика взаимодействия для Settings.xaml

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace EditFb2
+namespace Fb2Editing
 {
     /// <summary>
     /// Логика взаимодействия для AuthorC.xaml
