@@ -38,12 +38,14 @@ namespace Fb2Editing
         public string PublishInfo_city { get; private set; }
         public string PublishInfo_year { get; private set; }
 
-        public ReadFb2(string pathFile)
+        public string Description_Src_title_info { get; set; } // данные об исходнике книги (до перевода). (От 0 до 1 вхождения).Содержится в description, структура аналогична title-info 
+
+        public ReadFb2(string pathFile, List<string> badFiles)
         {
-            ParseFb2(pathFile);
+            ParseFb2(pathFile, badFiles);
         }
 
-        private void ParseFb2(string pathFile)
+        private void ParseFb2(string pathFile, List<string> badFiles)
         {
             using (XmlReader xml = XmlReader.Create(pathFile))
             {
@@ -57,7 +59,7 @@ namespace Fb2Editing
                     }
                     catch
                     {
-                        ///TODO: список не загруженных файлов
+                        badFiles.Add(pathFile);
                     }
                     XNamespace ns = xml.LookupNamespace("");
 
@@ -73,56 +75,192 @@ namespace Fb2Editing
                                 ParseTitleInfo(xml.ReadSubtree());
                             }
 
-                            if (xml.Name == "src-title-info")
+                            else if (xml.Name == "src-title-info")
                             {
-                                XElement elSrcTitleInfo = XNode.ReadFrom(xml) as XElement;
+                                //данные об исходнике книги(до перевода)
+                                //ParseSrcTitleInfo(xml.ReadSubtree());
+                                Description_Src_title_info = xml.ReadInnerXml();
                             }
 
-                            if (xml.Name == "document-info")
+                            else if (xml.Name == "document-info")
                             {
-                                XElement elDocumentInfo = XNode.ReadFrom(xml) as XElement;
-
-                                var authors = elDocumentInfo.Elements(ns + "author");
-                                foreach (var item in authors)
-                                {
-                                    Authors author = new Authors()
-                                    {
-                                        First_name = item.Element(ns + "first-name")?.Value,
-                                        Last_name = item.Element(ns + "last-name")?.Value,
-                                        Middle_name = item.Element(ns + "middle-name")?.Value,
-                                        Nickname = item.Element(ns + "nickname")?.Value,
-                                        Email = item.Element(ns + "email")?.Value,
-                                        Home_page = item.Element(ns + "home-page")?.Value,
-                                        UniqID = item.Element(ns + "id")?.Value
-                                    };
-                                    DocumentInfo_authors.Add(author);
-                                }
-
-                                DocumentInfo_date = elDocumentInfo.Element(ns + "date")?.Attribute("value") == null ? elDocumentInfo.Element(ns + "date")?.Value : elDocumentInfo.Element(ns + "date")?.Attribute("value")?.Value;
-                                DocumentInfo_history = elDocumentInfo.Element(ns + "history")?.Value;
-                                DocumentInfo_program_used = elDocumentInfo.Element(ns + "program-used")?.Value;
-                                DocumentInfo_src_ocr = elDocumentInfo.Element(ns + "src-ocr")?.Value;
-                                DocumentInfo_id = elDocumentInfo.Element(ns + "id")?.Value;
-                                DocumentInfo_version = elDocumentInfo.Element(ns + "version")?.Value;
+                                ParseDocumentInfo(xml.ReadSubtree());
                             }
 
-                            if (xml.Name == "publish-info")
+                            else if (xml.Name == "publish-info")
                             {
-                                XElement elPublishInfo = XNode.ReadFrom(xml) as XElement;
-
-                                PublishInfo_city = elPublishInfo.Element(ns + "city")?.Value;
-                                PublishInfo_book_name = elPublishInfo?.Element(ns + "book-name")?.Value;
-                                PublishInfo_publisher = elPublishInfo?.Element(ns + "publisher")?.Value;
-                                PublishInfo_year = elPublishInfo?.Element(ns + "year")?.Value;
+                                ParsePublishInfo(xml.ReadSubtree());
                             }
 
-                            if (xml.Name == "body")
+                            else if (xml.Name == "body")
                             {
                                 continueRead = false;
                             }
 
                             break;
                     }
+                }
+            }
+        }
+
+        private void ParsePublishInfo(XmlReader xml)
+        {
+            string lastNodeName = "";
+            while (xml.Read())
+            {
+                switch (xml.NodeType)
+                {
+                    case XmlNodeType.Element:
+                        if (xml.Name == "city")
+                        {
+                            lastNodeName = xml.Name;
+                        }
+                        else if (xml.Name == "book-name")
+                        {
+                            lastNodeName = xml.Name;
+                        }
+                        else if (xml.Name == "publisher")
+                        {
+                            lastNodeName = xml.Name;
+                        }
+                        else if (xml.Name == "year")
+                        {
+                            lastNodeName = xml.Name;
+                        }
+                        break;
+                    case XmlNodeType.Text:
+                        if (lastNodeName == "city")
+                        {
+                            PublishInfo_city += xml.Value;
+                        }
+                        else if (lastNodeName == "book-name")
+                        {
+                            PublishInfo_book_name += xml.Value;
+                        }
+                        else if (lastNodeName == "publisher")
+                        {
+                            PublishInfo_publisher += xml.Value;
+                        }
+                        else if (lastNodeName == "year")
+                        {
+                            PublishInfo_year += xml.Value;
+                        }
+                        break;
+                }
+            }
+        }
+
+        private void ParseDocumentInfo(XmlReader xml)
+        {
+            string lastNodeName = "";
+            Authors author = null;
+
+            while (xml.Read())
+            {
+                switch (xml.NodeType)
+                {
+                    case XmlNodeType.Element:
+                        if (xml.Name == "history")
+                        {
+                            lastNodeName = xml.Name;
+                        }
+                        else if(xml.Name == "program-used")
+                        {
+                            lastNodeName = xml.Name;
+                        }
+                        else if(xml.Name == "src-ocr")
+                        {
+                            lastNodeName = xml.Name;
+                        }
+                        else if(xml.Name == "id")
+                        {
+                            lastNodeName = xml.Name;
+                        }
+                        else if(xml.Name == "version")
+                        {
+                            lastNodeName = xml.Name;
+                        }
+                        else if (xml.Name == "author")
+                        {
+                            if (xml.IsStartElement())
+                                author = new Authors();
+                            ParseDocumentInfoAuthor(xml.ReadSubtree(), author);
+                            //if (xml.NodeType == XmlNodeType.EndElement)
+                            //    DocumentInfo_authors.Add(author);
+                        }
+                        break;
+                    case XmlNodeType.Text:
+                        if (lastNodeName == "history")
+                        {
+                            DocumentInfo_history += xml.Value;
+                        }
+                        else if (lastNodeName == "program-used")
+                        {
+                            DocumentInfo_program_used += xml.Value;
+                        }
+                        else if (lastNodeName == "src-ocr")
+                        {
+                            DocumentInfo_src_ocr += xml.Value;
+                        }
+                        else if (lastNodeName == "id")
+                        {
+                            DocumentInfo_id += xml.Value;
+                        }
+                        else if (lastNodeName == "version")
+                        {
+                            DocumentInfo_version += xml.Value;
+                        }
+                        break;
+                    case XmlNodeType.EndElement:
+                        if (xml.Name == "author")
+                        {
+                            DocumentInfo_authors.Add(author);
+                        }
+                        break;
+
+                }
+            }
+        }
+
+        private void ParseDocumentInfoAuthor(XmlReader xml, Authors author)
+        {
+            string lastNodeName = "";
+            while (xml.Read())
+            {
+                switch (xml.NodeType)
+                {
+                    case XmlNodeType.Element:
+                        if (xml.Name == "first-name")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "last-name")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "middle-name")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "nickname")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "email")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "home-page")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "id")
+                            lastNodeName = xml.Name;
+                        break;
+                    case XmlNodeType.Text:
+                        if (lastNodeName == "first-name")
+                            author.First_name += xml.Value;
+                        else if (lastNodeName == "last-name")
+                            author.Last_name += xml.Value;
+                        else if (lastNodeName == "middle-name")
+                            author.Middle_name += xml.Value;
+                        else if (lastNodeName == "nickname")
+                            author.Nickname += xml.Value;
+                        else if (lastNodeName == "email")
+                            author.Email += xml.Value;
+                        else if (lastNodeName == "home-page")
+                            author.Home_page += xml.Value;
+                        else if (lastNodeName == "id")
+                            author.UniqID += xml.Value;
+                        break;
                 }
             }
         }
@@ -139,21 +277,47 @@ namespace Fb2Editing
                         {
                             lastNodeName = xml.Name;
                         }
-                        if (xml.Name == "book-title")
+                        else if(xml.Name == "book-title")
                         {
                             lastNodeName = xml.Name;
                         }
-                        if (xml.Name == "keywords")
+                        else if(xml.Name == "keywords")
                         {
                             lastNodeName = xml.Name;
                         }
-                        if (xml.Name == "lang")
+                        else if(xml.Name == "lang")
                         {
                             lastNodeName = xml.Name;
                         }
-                        if (xml.Name == "src-lang")
+                        else if(xml.Name == "src-lang")
                         {
                             lastNodeName = xml.Name;
+                        }
+                        else if (xml.Name == "author")
+                        {
+                            Writers writer = new Writers();
+                            ParseTitleInfoWriter(xml.ReadSubtree(), writer);
+                            TitleInfo_writers.Add(writer);
+                        }
+                        else if (xml.Name == "translator")
+                        {
+                            Translators translator = new Translators();
+                            ParseTitleInfoTranslator(xml.ReadSubtree(), translator);
+                            TitleInfo_translators.Add(translator);
+                        }
+                        else if (xml.Name == "coverpage")
+                        {
+                            if (xml.HasAttributes)
+                            {
+                                while (xml.MoveToNextAttribute())
+                                {
+                                    if (xml.Name == "image")
+                                    {
+                                        TitleInfo_coverpage = xml.Value;
+                                        break;
+                                    }
+                                }
+                            }
                         }
 
                         break;
@@ -162,242 +326,120 @@ namespace Fb2Editing
                         {
                             TitleInfo_annotation += xml.Value;
                         }
-                        if (xml.Name == "book-title")
+                        else if(lastNodeName == "book-title")
                         {
                             TitleInfo_book_title = xml.Value;
                         }
-                        if (xml.Name == "keywords")
+                        else if(lastNodeName == "keywords")
                         {
                             TitleInfo_keyword = xml.Value;
                         }
-                        if (xml.Name == "lang")
+                        else if(lastNodeName == "lang")
                         {
                             TitleInfo_lang = xml.Value;
                         }
-                        if (xml.Name == "src-lang")
+                        else if(lastNodeName == "src-lang")
                         {
                             TitleInfo_src_lang = xml.Value;
                         }
-
+                        break;
+                    case XmlNodeType.EndElement:
+                        if (xml.Name == "member")
+                        {
+                        }
                         break;
                 }
             }
-                //XElement elTitleInfo = XNode.ReadFrom(xml) as XElement;
-
             //TitleInfo_date = elTitleInfo.Element(ns + "date")?.Attribute("value") == null ? elTitleInfo.Element(ns + "date")?.Value : elTitleInfo.Element(ns + "date")?.Attribute("value")?.Value;
             //TitleInfo_coverpage = elTitleInfo.Element(ns + "coverpage")?.Element(ns + "image")?.Attributes()?.Select(p => p.Value.Split('#')[1]).ToList()[0];
+
             //TitleInfo_genres = elTitleInfo.Elements(ns + "genre").Select(p => p.Value).ToList();
-            //var writers = elTitleInfo.Elements(ns + "author");
-            //foreach (var item in writers)
-            //{
-            //    Writers writer = new Writers()
-            //    {
-            //        First_name = item.Element(ns + "first-name")?.Value,
-            //        Last_name = item.Element(ns + "last-name")?.Value,
-            //        Middle_name = item.Element(ns + "middle-name")?.Value,
-            //        Nickname = item.Element(ns + "nickname")?.Value,
-            //        Email = item.Element(ns + "email")?.Value,
-            //        Home_page = item.Element(ns + "home-page")?.Value,
-            //        UniqID = item.Element(ns + "id")?.Value
-            //    };
-            //    TitleInfo_writers.Add(writer);
-            //}
-            //var translators = elTitleInfo.Elements(ns + "translator");
-            //foreach (var item in translators)
-            //{
-            //    Translators translator = new Translators()
-            //    {
-            //        First_name = item.Element(ns + "first-name")?.Value,
-            //        Last_name = item.Element(ns + "last-name")?.Value,
-            //        Middle_name = item.Element(ns + "middle-name")?.Value,
-            //        Nickname = item.Element(ns + "nickname")?.Value,
-            //        Email = item.Element(ns + "email")?.Value,
-            //        Home_page = item.Element(ns + "home-page")?.Value,
-            //        UniqID = item.Element(ns + "id")?.Value
-            //    };
-            //    TitleInfo_translators.Add(translator);
-            //}
+        }
 
+        private void ParseTitleInfoTranslator(XmlReader xml, Translators translator)
+        {
+            string lastNodeName = "";
+            while (xml.Read())
+            {
+                switch (xml.NodeType)
+                {
+                    case XmlNodeType.Element:
+                        if (xml.Name == "first-name")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "last-name")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "middle-name")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "nickname")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "email")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "home-page")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "id")
+                            lastNodeName = xml.Name;
+                        break;
+                    case XmlNodeType.Text:
+                        if (lastNodeName == "first-name")
+                            translator.First_name += xml.Value;
+                        else if (lastNodeName == "last-name")
+                            translator.Last_name += xml.Value;
+                        else if (lastNodeName == "middle-name")
+                            translator.Middle_name += xml.Value;
+                        else if (lastNodeName == "nickname")
+                            translator.Nickname += xml.Value;
+                        else if (lastNodeName == "email")
+                            translator.Email += xml.Value;
+                        else if (lastNodeName == "home-page")
+                            translator.Home_page += xml.Value;
+                        else if (lastNodeName == "id")
+                            translator.UniqID += xml.Value;
+                        break;
+                }
+            }
+        }
 
+        private void ParseTitleInfoWriter(XmlReader xml, Writers writer)
+        {
+            string lastNodeName = "";
+            while (xml.Read())
+            {
+                switch (xml.NodeType)
+                {
+                    case XmlNodeType.Element:
+                        if (xml.Name == "first-name")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "last-name")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "middle-name")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "nickname")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "email")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "home-page")
+                            lastNodeName = xml.Name;
+                        else if (xml.Name == "id")
+                            lastNodeName = xml.Name;
+                        break;
+                    case XmlNodeType.Text:
+                        if (lastNodeName == "first-name")
+                            writer.First_name += xml.Value;
+                        else if (lastNodeName == "last-name")
+                            writer.Last_name += xml.Value;
+                        else if (lastNodeName == "middle-name")
+                            writer.Middle_name += xml.Value;
+                        else if (lastNodeName == "nickname")
+                            writer.Nickname += xml.Value;
+                        else if (lastNodeName == "email")
+                            writer.Email += xml.Value;
+                        else if (lastNodeName == "home-page")
+                            writer.Home_page += xml.Value;
+                        else if (lastNodeName == "id")
+                            writer.UniqID += xml.Value;
+                        break;
+                }
+            }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-//            XElement xmlFile = XElement.Load(pathFile);
-//            var ns = xmlFile.GetDefaultNamespace();
-
-//            XElement elDescription = xmlFile.Element(ns + "description");
-//            IEnumerable<XElement> imagesBinary = xmlFile.Elements(ns + "binary");
-
-//            XElement elTitleInfo = elDescription.Element(ns + "title-info");
-//            XElement elPublishInfo = elDescription.Element(ns + "publish-info");
-//            XElement elDocumentInfo = elDescription.Element(ns + "document-info");
-
-//            string nameJpg = elTitleInfo.Element(ns + "coverpage")?.Element(ns + "image")?.Attributes()?.Select(p => p.Value.Split('#')[1]).ToList()[0];
-
-//            string binaryImg = imagesBinary.SingleOrDefault(p => p.Attribute("id").Value == nameJpg)?.Value;
-//            //BookFromFb2 bfb2 = new BookFromFb2();
-//            //var qAnnotation = elTitleInfo.Element(ns + "annotation")?.Value;
-//            //var qBook_name = elPublishInfo?.Element(ns + "book-name")?.Value;
-//            //var Book_title = elTitleInfo.Element(ns + "book-title")?.Value;
-//            //var qCity = elTitleInfo.Element(ns + "city")?.Value;
-//            //var qCoverpage = binaryImg;
-//            //var qDate_write = elTitleInfo.Element(ns + "date")?.Attribute("value") == null ? elTitleInfo.Element(ns + "date")?.Value : elTitleInfo.Element(ns + "date")?.Attribute("value")?.Value;
-//            //var qKeywords = elTitleInfo.Element(ns + "keywords")?.Value;
-//            //var qPublisher = elPublishInfo?.Element(ns + "publisher")?.Value;
-//            //var qYear = elPublishInfo?.Element(ns + "year")?.Value;
-//            //var qID_Language = DB.GetIDLanguage(elTitleInfo.Element(ns + "lang")?.Value.Replace(" ", string.Empty));
-//            //var qID_LanguageAfterTranslate = DB.GetIDLanguage(elTitleInfo.Element(ns + "src-lang")?.Value.Replace(" ", string.Empty));
-//            bfb2.book = new Book()
-//            {
-//                Annotation = elTitleInfo.Element(ns + "annotation")?.Value,
-//                Book_name = elPublishInfo?.Element(ns + "book-name")?.Value,
-//                Book_title = elTitleInfo.Element(ns + "book-title")?.Value,
-//                City = elTitleInfo.Element(ns + "city")?.Value,
-//                Coverpage = binaryImg,
-//                Date_write = elTitleInfo.Element(ns + "date")?.Attribute("value") == null ? elTitleInfo.Element(ns + "date")?.Value : elTitleInfo.Element(ns + "date")?.Attribute("value")?.Value,
-//                Keywords = elTitleInfo.Element(ns + "keywords")?.Value,
-//                Publisher = elPublishInfo?.Element(ns + "publisher")?.Value,
-//                Year = elPublishInfo?.Element(ns + "year")?.Value,
-//                ID_Language = DB.GetIDLanguage(elTitleInfo.Element(ns + "lang")?.Value.Replace(" ", string.Empty)),
-//                ID_LanguageAfterTranslate = DB.GetIDLanguage(elTitleInfo.Element(ns + "src-lang")?.Value.Replace(" ", string.Empty))
-//            };
-
-//            //DB.SaveData(book);
-
-//            bfb2.document = new Document()
-//            {
-//                Date_create_document = elDocumentInfo.Element(ns + "date")?.Attribute("value") == null ? elDocumentInfo.Element(ns + "date")?.Value : elDocumentInfo.Element(ns + "date")?.Attribute("value")?.Value,
-//                History = elDocumentInfo.Element(ns + "history")?.Value,
-//                PathToFile = pathFile,
-//                ID_Book = book.ID,
-//                Program_used = elDocumentInfo.Element(ns + "program-used")?.Value,
-//                Src_ocr = elDocumentInfo.Element(ns + "src-ocr")?.Value,
-//                UniqID = elDocumentInfo.Element(ns + "id")?.Value,
-//                Version = elDocumentInfo.Element(ns + "version")?.Value,
-//                //ID
-//            };
-
-//            //DB.SaveData(document);
-
-//            List<BookGenre> lstGenre = new List<BookGenre>();
-//            var genres = elTitleInfo.Elements(ns + "genre").Select(p => p.Value);
-//            foreach (string item in genres)
-//            {
-//                string nameGenre = item.Replace(" ", string.Empty);
-//                int tmp = DB.GetIDGenre(nameGenre);
-//                if (tmp == -1)
-//                {
-//                    DB.SaveData(new Genre(nameGenre, ""));
-//                    tmp = DB.GetIDGenre(nameGenre);
-//                }
-//                lstGenre.Add(new BookGenre() { ID_Book = book.ID, ID_Genre = tmp });
-//            }
-
-//            DB.SaveListData(lstGenre);
-
-//            List<BookWriter> lstBookWriter = new List<BookWriter>();
-//            IEnumerable<XElement> writers = elTitleInfo.Elements(ns + "author");
-//            foreach (XElement item in writers)
-//            {
-//                Writers writer = new Writers()
-//                {
-//                    First_name = item.Element(ns + "first-name")?.Value,
-//                    Last_name = item.Element(ns + "last-name")?.Value,
-//                    Middle_name = item.Element(ns + "middle-name")?.Value,
-//                    Nickname = item.Element(ns + "nickname")?.Value,
-//                    Email = item.Element(ns + "email")?.Value,
-//                    Home_page = item.Element(ns + "home-page")?.Value,
-//                    UniqID = item.Element(ns + "id")?.Value
-//                };
-//                DB.SaveData(writer);
-
-//                lstBookWriter.Add(new BookWriter() { ID_Book = book.ID, ID_Writer = writer.ID });
-//            }
-
-//            DB.SaveListData(lstBookWriter);
-
-
-//            List<DocumentAuthor> lstDocumentAuthor = new List<DocumentAuthor>();
-//            IEnumerable<XElement> authors = elDocumentInfo.Elements(ns + "author");
-//            foreach (XElement item in authors)
-//            {
-//                Authors author = new Authors()
-//                {
-//                    First_name = item.Element(ns + "first-name")?.Value,
-//                    Last_name = item.Element(ns + "last-name")?.Value,
-//                    Middle_name = item.Element(ns + "middle-name")?.Value,
-//                    Nickname = item.Element(ns + "nickname")?.Value,
-//                    Email = item.Element(ns + "email")?.Value,
-//                    Home_page = item.Element(ns + "home-page")?.Value,
-//                    UniqID = item.Element(ns + "id")?.Value
-//                };
-//                DB.SaveData(author);
-
-//                lstDocumentAuthor.Add(new DocumentAuthor() { ID_Book = book.ID, ID_Author = author.ID });
-//            }
-
-//            DB.SaveListData(lstDocumentAuthor);
-
-
-//            List<BookTranslator> lstBookTranslator = new List<BookTranslator>();
-//            IEnumerable<XElement> translators = elTitleInfo.Elements(ns + "translator");
-//            foreach (XElement item in authors)
-//            {
-//                Translators translator = new Translators()
-//                {
-//                    First_name = item.Element(ns + "first-name")?.Value,
-//                    Last_name = item.Element(ns + "last-name")?.Value,
-//                    Middle_name = item.Element(ns + "middle-name")?.Value,
-//                    Nickname = item.Element(ns + "nickname")?.Value,
-//                    Email = item.Element(ns + "email")?.Value,
-//                    Home_page = item.Element(ns + "home-page")?.Value,
-//                    UniqID = item.Element(ns + "id")?.Value
-//                };
-//                DB.SaveData(translator);
-
-//                lstBookTranslator.Add(new BookTranslator() { ID_Book = book.ID, ID_Translator = translator.ID });
-//            }
-
-//            DB.SaveListData(lstBookTranslator);
-
-//            List<BookSequence> lstSequence = new List<BookSequence>();
-//            IEnumerable<XElement> Sequences = elTitleInfo.Elements(ns + "sequence");
-//            foreach (XElement item in Sequences)
-//            {
-//                Sequence sequence = new Sequence()
-//                {
-//                    Name = item.Attribute("name")?.Value
-//                };
-//                DB.SaveData(sequence);
-
-//                string number = item.Attribute("number")?.Value;
-//                int numberSequence = number == null ? -1 : int.Parse(number);
-//                lstSequence.Add(new BookSequence() { ID_Book = book.ID, ID_Sequence = sequence.ID, Number_in_sequence = numberSequence });
-//            }
-
-//            DB.SaveListData(lstSequence);
-
-//            List<Src_urls> lstSrc_urls = new List<Src_urls>();
-//            IEnumerable<XElement> lstUrl = elDocumentInfo.Elements(ns + "src-url");
-//            foreach (var item in lstUrl)
-//            {
-//                lstSrc_urls.Add(new Src_urls() { ID_Book = book.ID, Url = item.Value });
-//            }
-
-//            DB.SaveListData(lstSrc_urls);
-
-//            return bfb2;
-//        }
-//    }
-//}

@@ -26,11 +26,11 @@ namespace Fb2Editing
             string path = DB.GetPathToLibrary();
             string[] arrFiles;
 
+            List<string> badFiles = new List<string>();
             if (Directory.Exists(path))
             {
                 arrFiles = Directory.GetFiles(path, "*.fb2", SearchOption.AllDirectories);
                 //List<AllBook> lstAll = new List<AllBook>();
-                //List<BookFromFb2> lstBooks = new List<BookFromFb2>();
                 List<ReadFb2> lstReadfb2 = new List<ReadFb2>();
                 foreach (string name in arrFiles)
                 {
@@ -38,10 +38,8 @@ namespace Fb2Editing
                     //ReadWriteFb2.SaveBookToDB(name);
                     //lstAll.Add(XmlFiles.GetFieldFromFile(name));
                     //lstBooks.Add(ReadFb2.SaveBookToDB(name));
-                    lstReadfb2.Add(new ReadFb2(name));
+                    lstReadfb2.Add(new ReadFb2(name), badFiles);
                 }
-                
-
                 //DB.SaveListData(lstAll);
             }
 

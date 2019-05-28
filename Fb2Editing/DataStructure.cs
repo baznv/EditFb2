@@ -68,6 +68,9 @@ namespace Fb2Editing
         public int ID_LanguageAfterTranslate { get; set; } // язык книги в документе, то есть язык после перевода(От 0 до 1 вхождения) <title-info>:<src-lang>
         public string Keywords { get; set; } // ключевые слова к данной книге для поисковых систем (От 0 до 1 вхождения) <title-info>:<keywords> 
 
+        public string Src_title_info  { get; set; } // данные об исходнике книги (до перевода). (От 0 до 1 вхождения).Содержится в description, структура аналогична title-info 
+
+
     }
     [Data]
     public class Language

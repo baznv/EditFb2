@@ -26,7 +26,7 @@ namespace Fb2Editing
                 SQLiteConnection.CreateFile(fullPathToDB);
                 if (File.Exists(fullPathToDB))
                 {
-                    stringConnection = $"Data Source={fullPathToDB}; Version=3; journal_mode=MEMORY; synchronous = OFF;";
+                    stringConnection = $"Data Source={fullPathToDB}; Version=3; journal_mode=MEMORY; ";
                     CreateTables();
                     SettingsApp set = new SettingsApp("pathLibrary", @"D:\Книги");
                     InsertRow(set);
